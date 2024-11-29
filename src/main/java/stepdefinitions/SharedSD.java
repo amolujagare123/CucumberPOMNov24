@@ -5,6 +5,8 @@ import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.ResourceBundle;
+
 public class SharedSD {
     static WebDriver driver ;
     @Before
@@ -12,7 +14,7 @@ public class SharedSD {
     {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("");
+        driver.get(ResourceBundle.getBundle("config").getString("url"));
     }
 
     @After

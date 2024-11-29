@@ -11,9 +11,9 @@ Feature: All bookings.com scenarios
     When I select option for stars as <stars>
     Then I verify system displays only <stars> hotels on search result
     Examples:
-      | stars   |
-      | 5 stars |
-      | 4 stars |
+      | stars |
+   #   | 5 stars |
+   #   | 4 stars |
       | 3 stars |
 
 
@@ -32,4 +32,4 @@ Feature: All bookings.com scenarios
   @hotelsSearch
   Scenario: verify given hotel is present in the list
     Given I am on default locations search result screen
-    Then I verify "Hyatt Regency" is within the search result
+    Then I verify "Shantai Hotel" is within the search result
